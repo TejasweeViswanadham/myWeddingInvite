@@ -179,6 +179,24 @@
   }
   @media (prefers-reduced-motion:reduce){ .petal{ animation:none; display:none; } .seal-btn,.seal-halo{ animation:none; } }
 
+  /* Compact the envelope gate on short viewports so the seal stays visible without scrolling */
+  @media (max-height: 780px){
+    #envelope-screen{ padding-bottom:16px; }
+    .toran-flap{ border-left-width:150px; border-right-width:150px; border-top-width:54px; }
+    .toran-dashes{ gap:18px; }
+    .toran-dashes span{ height:16px; }
+    .gate-card{ padding:18px 20px 22px; }
+    .gate-label{ font-size:12px; }
+    .gate-sub{ font-size:13px; margin:4px 0 12px; }
+    .gate-photo-tall{ width:auto; height:min(30vh, 360px); max-width:100%; margin:0 auto; }
+    .gate-card .divider{ margin:12px auto 16px; }
+    .gate-date{ margin-top:12px; font-size:13px; }
+    .seal-wrap{ margin-top:14px; }
+    .seal-halo{ width:80px; height:80px; }
+    .seal-btn{ width:56px; height:56px; font-size:22px; }
+    .tap-hint{ margin-top:6px; }
+  }
+
   /* ============ Main content ============ */
   #invite{ max-width:640px; margin:0 auto; padding-bottom:120px; opacity:0; transform:translateY(14px); transition:opacity .8s ease, transform .8s ease; }
   #invite.shown{ opacity:1; transform:none; }
